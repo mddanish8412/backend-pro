@@ -5,7 +5,10 @@ import { uploadOnCloudinary } from "../utils/cloudinary.js"
 import  {ApiResponse} from "../utils/ApiResponse.js"
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
+<<<<<<< HEAD
 import { appendFile } from "fs";
+=======
+>>>>>>> 26702dd9c3108bf2b62ef7d1c6117bb8baa114c1
 
 
 const generateAccessAndRefereshTokens = async (userId) => {
@@ -181,11 +184,32 @@ const logoutUser = asyncHandler(async (req, res) => {
     }
   );
 
+<<<<<<< HEAD
   const options = {
     httpOnly: true,
     secure: true,
   };
 
+=======
+const logoutUser = asyncHandler(async (req, res) => {
+  await User.findByIdAndUpdate(
+    req.user._id,
+    {
+      $unset: {
+        refreshToken: 1, // Remove the refreshToken field
+      },
+    },
+    {
+      new: true,
+    }
+  );
+
+  const options = {
+    httpOnly: true,
+    secure: true,
+  };
+
+>>>>>>> 26702dd9c3108bf2b62ef7d1c6117bb8baa114c1
   return res
     .status(200)
     .clearCookie("accessToken", options)
@@ -197,7 +221,11 @@ const refreshAccessToken = asyncHandler( async (req, res) =>{
     
  const incomingRefreshToken =  req.cookies.refreshToken || req.body.refreshToken
 
+<<<<<<< HEAD
  if(!incomingRefreshToken){
+=======
+ if(incomingRefreshToken){
+>>>>>>> 26702dd9c3108bf2b62ef7d1c6117bb8baa114c1
      throw new ApiError(401, "unauthorized request!") 
  }
 
@@ -238,6 +266,7 @@ const refreshAccessToken = asyncHandler( async (req, res) =>{
   }
 
 })
+<<<<<<< HEAD
 
 const changeCurrentPassword = asyncHandler( async (req, res) =>{
    const {oldPassword, newPassword} = req.body
@@ -350,15 +379,21 @@ const updateUserCoverImage = asyncHandler(async (req, res) =>{
        
 })
 
+=======
+>>>>>>> 26702dd9c3108bf2b62ef7d1c6117bb8baa114c1
 
 export {
   registerUser,
   loginUser,
   logoutUser,
+<<<<<<< HEAD
   refreshAccessToken,
   changeCurrentPassword,
   getCurrentUser,
   updateAccountDetails,
   updateUserAvatar,
   updateUserCoverImage,
+=======
+  refreshAccessToken
+>>>>>>> 26702dd9c3108bf2b62ef7d1c6117bb8baa114c1
 }
