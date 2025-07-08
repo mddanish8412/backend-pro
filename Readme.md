@@ -39,11 +39,7 @@ A full-featured backend API for a YouTube-like platform built with **Node.js**, 
 ├── server.js # App bootstrap
 └── .env # Environment variables
 
-yaml
-Copy
-Edit
 
----
 
 ## 🚀 Getting Started
 
@@ -53,28 +49,25 @@ Edit
 git clone https://github.com/your-username/youtube-backend.git
 cd youtube-backend
 2. Install dependencies
-bash
-Copy
-Edit
+
 npm install
 3. Environment Variables
 Create a .env file in the root directory and configure it:
 
-env
-Copy
-Edit
+
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/youtube-clone
 JWT_SECRET=your_jwt_secret
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
+
+
 4. Run the server
-bash
-Copy
-Edit
+
 npm run dev
 API is now running at http://localhost:5000/api.
+
 
 📡 API Endpoints
 Module	        Endpoint	                           Description
@@ -96,35 +89,22 @@ Full Postman collection available soon.
 
 📦 Tech Stack
 Node.js
-
 Express
-
 MongoDB + Mongoose
-
 Cloudinary (media upload)
-
 JWT Authentication
-
 Multer (file handling)
-
 Bcrypt, dotenv, cors, etc.
 
 
 ✅ To-Do
  JWT Auth
-
  Video CRUD
-
  Playlist feature
-
  Comment system
-
  Tweet module
-
  Subscription logic
-
  Admin dashboard
-
  Postman Docs
 
 🤝 Contributing
