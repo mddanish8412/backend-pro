@@ -28,16 +28,16 @@ A full-featured backend API for a YouTube-like platform built with **Node.js**, 
 ## 📁 Folder Structure
 
 .
-├── config/ # DB, Cloudinary, and environment configs
-├── controllers/ # Route handlers
-├── models/ # Mongoose schemas
-├── routes/ # API routes
-├── middlewares/ # Auth, error handlers, etc.
-├── utils/ # Helper functions (e.g. asyncHandler, ApiError)
-├── uploads/ # (optional) local storage for uploads
-├── app.js # Express app setup
-├── server.js # App bootstrap
-└── .env # Environment variables
+==> config/ # DB, Cloudinary, and environment configs
+==> controllers/ # Route handlers
+==> models/ # Mongoose schemas
+==> routes/ # API routes
+==> middlewares/ # Auth, error handlers, etc.
+==> utils/ # Helper functions (e.g. asyncHandler, ApiError)
+==> uploads/ # (optional) local storage for uploads
+==> app.js # Express app setup
+==> server.js # App bootstrap
+==> .env # Environment variables
 
 
 
